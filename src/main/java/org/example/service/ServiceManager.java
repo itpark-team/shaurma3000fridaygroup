@@ -19,6 +19,8 @@ public class ServiceManager {
         mainMenuScreenLogic = new MainMenuScreenLogic();
 
         methods.put(State.WaitingStart, mainMenuScreenLogic::processWaitingCommandStart);
+
+        methods.put(State.WaitingButtonClickInMainMenu, mainMenuScreenLogic::processWaitingButtonClickInMainMenu);
     }
 
     public SendMessage callLogicMethod(String textFromUser, TransmittedData transmittedData) throws Exception {
